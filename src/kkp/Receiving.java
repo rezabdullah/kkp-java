@@ -420,6 +420,9 @@ public class Receiving extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
+        int qty = Integer.parseInt(inputItemQuantity.getText());
+        int weight = Integer.parseInt(inputItemWeight.getText());
+        
         SetComboBoxValue getInputSender = (SetComboBoxValue) inputSender.getSelectedItem();
         int inputSenderID = getInputSender.GetIndex();
         
@@ -432,7 +435,7 @@ public class Receiving extends javax.swing.JFrame {
                 "', '" + inputRecipient.getText() + "', '" + inputAddress.getText() + "', '" + inputPhone.getText() + 
                 "', '" + inputItemName.getText() + "', '" + inputItemQuantity.getText() + "', '" + inputItemWeight.getText() + 
                     "', '" + inputPackingTypeID + "', '" + inputShippingType.getText() + "', '" + inputPackQuantity.getText() + 
-                    "', '10000')", RETURN_GENERATED_KEYS);
+                    "', '" + (qty * weight * 10000) + "', 'unpaid')", RETURN_GENERATED_KEYS);
             stm.execute();
             ResultSet rs= stm.getGeneratedKeys();
             

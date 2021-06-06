@@ -347,11 +347,9 @@ public class Delivery extends javax.swing.JFrame {
 
     private void btnUpdateStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateStatusActionPerformed
         try{
-            System.out.println("INSERT INTO shipping_detail VALUES(null, '" + this.idShipping +
-                    "', " + Session.id + "', 'delivery', '" + inputNote.getText() + "')");
             java.sql.Connection con = Database.ConnectDB();
             java.sql.PreparedStatement stm = con.prepareStatement("INSERT INTO shipping_detail VALUES(null, '" + this.idShipping +
-                    "', '" + Session.id + "', 'delivery', '" + inputNote.getText() + "')");
+                    "', '" + Session.id + "', 'delivered', '" + inputNote.getText() + "')");
             stm.execute();
 
             JOptionPane.showMessageDialog(null, "Data tersimpan", "Sukses", JOptionPane.INFORMATION_MESSAGE);
