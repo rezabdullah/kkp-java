@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Apr 2021 pada 08.27
+-- Waktu pembuatan: 06 Jun 2021 pada 16.32
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.3
 
@@ -98,22 +98,24 @@ CREATE TABLE `shipping` (
   `id_sender` int(20) NOT NULL,
   `recipient_name` varchar(255) NOT NULL,
   `recipient_address` text NOT NULL,
-  `recipient_phone` int(20) NOT NULL,
+  `recipient_phone` varchar(20) NOT NULL,
   `item_name` text NOT NULL,
   `item_weight` int(10) NOT NULL,
   `item_qty` int(10) NOT NULL,
   `id_pack` int(10) NOT NULL,
   `ship_type` varchar(255) NOT NULL,
   `pack_qty` int(10) NOT NULL,
-  `amount` int(20) NOT NULL
+  `amount` int(20) NOT NULL,
+  `payment_status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `shipping`
 --
 
-INSERT INTO `shipping` (`id`, `id_sender`, `recipient_name`, `recipient_address`, `recipient_phone`, `item_name`, `item_weight`, `item_qty`, `id_pack`, `ship_type`, `pack_qty`, `amount`) VALUES
-(1, 1, 'Abdullah Reza', 'jalan jambore kp pondok ranggon gg jambu, Harjamukti Cimanggis Depok Jawa Barat', 1, 'Mesin pesawat jet', 10, 1, 1, 'express', 1, 100000);
+INSERT INTO `shipping` (`id`, `id_sender`, `recipient_name`, `recipient_address`, `recipient_phone`, `item_name`, `item_weight`, `item_qty`, `id_pack`, `ship_type`, `pack_qty`, `amount`, `payment_status`) VALUES
+(1, 1, 'Abdullah Reza', 'jalan jambore kp pondok ranggon gg jambu, Harjamukti Cimanggis Depok Jawa Barat', '321321321321', 'Mesin pesawat jet', 10, 1, 1, 'express', 1, 100000, 'paid'),
+(7, 1, 'Nur Kholis', 'Jayapura', '123123123123', 'Meja Kayu', 5, 10, 1, 'regular', 5, 500000, 'unpaid');
 
 -- --------------------------------------------------------
 
@@ -135,7 +137,11 @@ CREATE TABLE `shipping_detail` (
 
 INSERT INTO `shipping_detail` (`id`, `id_shipping`, `officer`, `status`, `note`) VALUES
 (1, 1, '1', 'receiving', 'lorem ipsum dolor sit amet'),
-(4, 1, '1', 'delivery', 'sudah dikirim');
+(4, 1, '1', 'delivered', 'sudah dikirim'),
+(5, 1, '1', 'drop point', 'drop point'),
+(6, 7, '1', 'receiving', 'dikirim'),
+(9, 7, '1', 'drop point', 'sampai di bali'),
+(10, 7, '1', 'delivered', 'sampai di jayapura');
 
 --
 -- Indexes for dumped tables
@@ -197,13 +203,13 @@ ALTER TABLE `pack`
 -- AUTO_INCREMENT untuk tabel `shipping`
 --
 ALTER TABLE `shipping`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `shipping_detail`
 --
 ALTER TABLE `shipping_detail`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
