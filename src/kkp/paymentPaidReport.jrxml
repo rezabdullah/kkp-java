@@ -70,6 +70,18 @@
 				</textElement>
 				<text><![CDATA[PAYMENT PAID]]></text>
 			</staticText>
+			<image>
+				<reportElement x="-639" y="-16" width="149" height="94" uuid="c1c5cf69-6acf-4d59-b45d-4c5cfa3a917e"/>
+				<imageExpression><![CDATA["E:\\Unindra\\Semester 6\\Pemrograman Visual\\kkp\\src\\images\\login-wallpaper.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-639" y="-16" width="149" height="94" uuid="df4422f9-b2ef-48a3-ae6a-68b8109fb65c"/>
+				<imageExpression><![CDATA["E:\\Unindra\\Semester 6\\Pemrograman Visual\\kkp\\src\\images\\login-wallpaper.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="11" y="-16" width="172" height="115" uuid="59ada411-e22a-4e02-9b32-46f343b68237"/>
+				<imageExpression><![CDATA["E:\\Unindra\\Semester 6\\Pemrograman Visual\\kkp\\src\\images\\login-wallpaper.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -207,31 +219,25 @@
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="25" splitType="Stretch">
-			<frame>
-				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="18533548-ecd1-4921-b19a-160a76792949"/>
-				<textField evaluationTime="Report">
-					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="aaf96ed7-9edf-4bb9-a17f-b2178890dc3e"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="c0cd343d-5078-4548-bfcc-6e4c6fa0c39c"/>
-					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
-				</textField>
-				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="68589c22-3bed-4398-9a49-6a32e0a974cf"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-				</textField>
-			</frame>
+		<band height="121" splitType="Stretch">
+			<staticText>
+				<reportElement x="688" y="94" width="73" height="20" uuid="8cce0742-b1e5-41b9-9156-bdfe875ff745"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Setyo Harsoyo]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="693" y="11" width="100" height="20" uuid="7ce16fc0-4ab5-4191-b387-66d1acfafb2e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="690" y="33" width="63" height="20" uuid="501e193e-6587-4432-8869-02ae6217f0b4"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Mengetahui,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="654" y="11" width="36" height="20" uuid="205a2698-2c1b-495d-af71-18cf0d6cff72"/>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>

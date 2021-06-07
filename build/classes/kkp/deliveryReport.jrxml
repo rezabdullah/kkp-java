@@ -74,6 +74,10 @@
 				</textElement>
 				<text><![CDATA[PT. GEMA LINTAS SINERGI]]></text>
 			</staticText>
+			<image>
+				<reportElement x="28" y="-15" width="157" height="105" uuid="8c633558-c66b-4304-8151-51ac42e3ef05"/>
+				<imageExpression><![CDATA["E:\\Unindra\\Semester 6\\Pemrograman Visual\\kkp\\src\\images\\login-wallpaper.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -227,31 +231,25 @@
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="25" splitType="Stretch">
-			<frame>
-				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="36fddd1e-5e5b-4ee1-abe2-93481167ce55"/>
-				<textField evaluationTime="Report">
-					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="8bdae1d3-b8f3-4cf7-bd99-172afda52f92"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="07803f34-a3a2-4385-9011-d74c5c876538"/>
-					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
-				</textField>
-				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="7ac4afb4-17eb-4848-8d4e-d654e58c5acd"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-				</textField>
-			</frame>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement x="694" y="90" width="73" height="20" uuid="a3bb8b68-f0e4-4553-af52-21d6487616a5"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Setyo Harsoyo]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="700" y="7" width="100" height="20" uuid="1c7555ab-17ab-4889-889c-d9518994d47b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="697" y="29" width="63" height="20" uuid="1c586bb3-b599-4c6a-a8b8-36cf7e4a9267"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Mengetahui,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="661" y="7" width="36" height="20" uuid="a2add08d-aa16-423d-81ba-04985f6da317"/>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>
